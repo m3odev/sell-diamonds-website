@@ -1,0 +1,94 @@
+html , body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#header-logo {
+    
+}
+
+#header-ul li{
+    display: inline;
+}
+
+#header-menu {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#header-menu ul li a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 15px;
+    letter-spacing: 1px;
+    font-weight: 300px;
+}
+
+#header-menu ul li a:hover{
+    text-decoration-line: underline;
+}
+
+#header-banner {
+    margin-top: 30px;
+}
+
+#header-banner img{
+    width: 100%;
+    height: 20cm;
+}
+
+#intro h3{
+    text-align: center;
+
+    font-family: "Averta Std CY";
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #b48c72;
+
+    margin-top: 12px;
+    margin-bottom: 10px;
+
+    letter-spacing: 0;
+    line-height: 1.33333;
+
+    text-transform: uppercase;
+}
+
+#intro-div {
+    display: inline;
+}
+
+#intro-div ul {
+    display: flex;
+    justify-content: center;
+}
+
+#intro-div ul li{
+    width: 20%;
+    /* display: flex;
+    justify-content: center; */
+}
+
+#intro-div ul li img{
+    width: 95%;
+    height: 80%;
+}
+
+p {
+    display: inline;
+}
