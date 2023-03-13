@@ -1,10 +1,14 @@
 html , body {
     margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    max-width: 95%;
 }
 
 #header{
@@ -41,7 +45,7 @@ html , body {
     color: black;
     cursor: pointer;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     padding: 15px;
     letter-spacing: 0.5px;
     font-weight: 300px;
@@ -71,7 +75,7 @@ html , body {
     text-align: center;
 
     font-family: "Averta Std CY";
-    font-size: 26px;
+    font-size: 36px;
     font-weight: 700;
 
     color: #b48c72;
@@ -124,11 +128,12 @@ p {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
   position: relative;
   margin: auto;
   margin-top: 40px;
 }
+
 
 /* Hide the images by default */
 .mySlides {
@@ -209,16 +214,216 @@ p {
   to {opacity: 1}
 }
 
-.product-row {
+#product-row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+
+  width: 90%;
+}
+
+#product-detail{
+  display: flex;
   justify-content: center;
 }
 
 .product-img {
   object-fit: cover;
+
+  display: flex;
+  justify-content: center;
+}
+
+.product-img img {
+  width: 80%;
+  height: 30%;
+}
+
+.product-col {
+  width: 20%;
+  height: 100%;
+
+}
+
+.product-col h3,p {
+  text-align: left;
+
+  margin-top: 10px;
+  margin-left: 33px;
+
+  font-size: 22px;
+  
+  max-width: 80%;
+  height: 46px;
+
+  line-height: 1.5;
+
+  color: #3F3B36;
+  
 }
 
 .product-col h3 {
   font-weight: 300;
+}
+
+.product-col p {
+  font-weight: 700;
+}
+
+#banner-slideshow {
+  margin-top: 2cm;
+  
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#banner-slideshow img{
+  margin: 17px;
+  padding: 7px;
+
+  width: 75%;
+  height: 60%;
+}
+
+#new-home{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 25px;
+}
+
+#box-img{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+}
+
+#box-img h3 {
+  max-width: 70%;
+  font-size: 26px;
+
+  text-align: left;
+  float: left;
+  margin-left:-83px;
+}
+
+.box-img-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+
+}
+
+.box-img-content img {
+  width: 100%;
+}
+
+.box-img-content p {
+  font-size: 26px;
+  font-weight: 300;
+  max-width: 70%;
+  height: auto;
+  margin-bottom: 0;
+  line-height: 1.6;
+  text-overflow: ellipsis;
+  text-align: left;
+  margin-left:-83px;
+}
+
+.box-img-img {
+  display: flex;
+  justify-content: center;
+
+  width: 90%;
+}
+
+#contact {
+  width: 80%;
+  margin-top: 3cm;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#contact-left{
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+}
+
+#contact-left img {
+  width: 90%;
+  height: 90%;
+}
+
+#contact-right{
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  padding-left: 15px;
+}
+
+#contact-right span{
+  text-align: left;
+  max-width: 70%;
+
+  font-size: 24px;
+}
+
+#contact-right button {
+  margin-top: 1cm;
+
+  width: 2cm;
+  height: 1.3cm;
+
+  border: 1px solid #B48C72;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  font-weight: 300;
+
+  padding: 5px 15px !important;
+
+  min-width: 180px;
+  text-align: center;
+
+  color: #B48C72;
+  background: transparent;
+}
+
+.title {
+  margin-top: 1cm;
+
+  font-weight: bold;
+  text-shadow: #3F3B36;
+}
+
+hr {
+  width: 50%;
+  text-align: center;
+}
+
+#back-to-homepage:hover{
+  color: brown;
+  text-decoration: underline;
 }
