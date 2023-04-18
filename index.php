@@ -5,17 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tierra</title>
+    <link rel="stylesheet" type="text/css" href="includes/css/style.css">
 </head>
 
+<?php
+	session_start();
+	if(isset($_SESSION['user']['uid']))
+	{
+		include("includes/header_user.php");
+	}
+	else
+	{
+		include("includes/html/header.php");
+	}
+	include("includes/connect_db.php");
+	include("includes/check_errors.php");
+?>
+
 <body>
-    <div id="header">
+    <!-- <div id="header">
         <img id="header-logo" src="https://www.tierra.vn/files/logo-header-CAYxzy8F6Z.jpg" alt="logo">
-    </div>
+    </div> -->
 
     <!-- nav pc -->
-    <div id="header-menu">
+    <!-- <div id="header-menu">
         <ul id="header-ul">
             <li>
                 <a href="facebook.com">Home page</a>
@@ -42,7 +56,7 @@
                 <a href="facebook.com">Tierra và bạn</a>
             </li>
         </ul>
-    </div>
+    </div> -->
 
     <label id="nav-bar-btn" for="nav-mobile-input">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -93,7 +107,7 @@
     </div>
 
     <div id="header-banner">
-        <img src="./img/banner-web-homepage-1-nMErTkbSNu.jpg" alt="header banner">
+        <img src="includes/img/banner-web-homepage-1-nMErTkbSNu.jpg" alt="header banner">
     </div>
 
     <div id="intro">
@@ -103,23 +117,23 @@
             <ul id="intro-ul" style="list-style-type:none;">
                 <li>
 
-                    <img src="./img/thanh-lich-jsW4ozPWXh.jpg" alt="">
+                    <img src="includes/img/thanh-lich-jsW4ozPWXh.jpg" alt="">
                 </li>
                 <li>
 
-                    <img src="./img/thanh-lich-jsW4ozPWXh.jpg" alt="">
+                    <img src="includes/img/thanh-lich-jsW4ozPWXh.jpg" alt="">
                 </li>
                 <li>
 
-                    <img src="./img/thanh-lich-jsW4ozPWXh.jpg" alt="">
+                    <img src="includes/img/thanh-lich-jsW4ozPWXh.jpg" alt="">
                 </li>
                 <li>
 
-                    <img src="./img/thanh-lich-jsW4ozPWXh.jpg" alt="">
+                    <img src="includes/img/thanh-lich-jsW4ozPWXh.jpg" alt="">
                 </li>
             </ul>
             <div id="intro-image">
-                <img src="./img/group-232-8H9ypsf84k.png" alt="">
+                <img src="includes/img/group-232-8H9ypsf84k.png" alt="">
             </div>
 
         </div>
@@ -131,19 +145,19 @@
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="./img/banner-km-1--lLUAv9bUhH.webp" style="width:100%">
+            <img src="includes/img/banner-website-2-k10d8jl94r-yOjYTNy0kp.jpg" style="width:100%">
             <!-- <div class="text">Caption Text</div> -->
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="./img/banner-website-2-k10d8jl94r-yOjYTNy0kp.jpg" style="width:100%">
+            <img src="includes/img/banner-website-2-k10d8jl94r-yOjYTNy0kp.jpg" style="width:100%">
             <!-- <div class="text">Caption Two</div> -->
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="/img/banner-website-WR3pJEJ3PQ.webp" style="width:100%">
+            <img src="includes/img/banner-website-WR3pJEJ3PQ.webp" style="width:100%">
             <!-- <div class="text">Caption Three</div> -->
         </div>
     </div>
@@ -165,7 +179,7 @@
         <div id="product-row">
             <div class="product-col">
                 <div class="product-img">
-                    <img src="./img/ring1.webp" alt="product 1">
+                    <img src="includes/img/ring1.webp" alt="product 1">
                 </div>
 
                 <h3> Nhẫn cầu hôn kim cương Solitaire Pavé 6 chấu viền bi NCH1204 </h3>
@@ -174,7 +188,7 @@
 
             <div class="product-col">
                 <div class="product-img">
-                    <img src="./img/ring2.webp" alt="">
+                    <img src="includes/img/ring2.webp" alt="">
                 </div>
 
                 <h3>Nhẫn cầu hôn kim cương Trellis 4 chấu xoắn NCH1402</h3>
@@ -183,7 +197,7 @@
 
             <div class="product-col">
                 <div class="product-img">
-                    <img src="./img/ring3.webp" alt="">
+                    <img src="includes/img/ring3.webp" alt="">
                 </div>
 
                 <h3>Nhẫn cầu hôn kim cương Twist 1 đai tấm NCH1701</h3>
@@ -192,7 +206,7 @@
 
             <div class="product-col">
                 <div class="product-img">
-                    <img src="./img/ring4.webp" alt="">
+                    <img src="includes/img/ring4.webp" alt="">
                 </div>
 
                 <h3>Nhẫn cầu hôn kim cương Fivestone dạng trellis NCH3302</h3>
@@ -203,13 +217,13 @@
     </div>
 
     <div id="banner-slideshow">
-        <img src="./img/danh-muc-nhan-cau-hon-kim-cuong-GBk6BLPuq0.webp" alt="ảnh intro">
+        <img src="includes/img/danh-muc-nhan-cau-hon-kim-cuong-GBk6BLPuq0.webp" alt="ảnh intro">
 
-        <img src="./img/3-danh-m-c-ncc-60HZxd9nsl.jpg" alt="">
+        <img src="includes/img/3-danh-m-c-ncc-60HZxd9nsl.jpg" alt="">
 
-        <img src="./img/tskc-0X0CJ0KUaK.webp" alt="">
+        <img src="includes/img/tskc-0X0CJ0KUaK.webp" alt="">
 
-        <img src="./img/kc-Q65UOrHNUj.webp" alt="">
+        <img src="includes/img/kc-Q65UOrHNUj.webp" alt="">
     </div>
 
     <h3 class="text-heading">Tierra và bạn</h3>
@@ -220,7 +234,7 @@
 
             <div class="box-img-content">
                 <div class="box-img-img">
-                    <img src="./img/cac-mau-nhan-cuoi-dep-2023-ncc2047-lyYj6jHa2V.webp" alt="product 1">
+                    <img src="includes/img/cac-mau-nhan-cuoi-dep-2023-ncc2047-lyYj6jHa2V.webp" alt="product 1">
                 </div>
 
                 <h3> Các mẫu nhẫn cưới đẹp 2023 được ưa chuộng nhiều nhất </h3>
@@ -229,7 +243,7 @@
 
             <div class="box-img-content">
                 <div class="box-img-img">
-                    <img src="./img/sweet-ladies-2-cover4-TUjoV4G9Ow.webp" alt="product 1">
+                    <img src="includes/img/sweet-ladies-2-cover4-TUjoV4G9Ow.webp" alt="product 1">
                 </div>
 
                 <h3> Sweet Ladies - Trang sức thời trang cho các nàng kẹo ngọt</h3>
@@ -238,7 +252,7 @@
 
             <div class="box-img-content">
                 <div class="box-img-img">
-                    <img src="./img/vang-trang-fwpgpnoooq-OxokwT1QPr.webp" alt="product 1">
+                    <img src="includes/img/vang-trang-fwpgpnoooq-OxokwT1QPr.webp" alt="product 1">
                 </div>
 
                 <h3> Cách giữ nhẫn cưới vàng trắng luôn sáng bóng như mới </h3>
@@ -249,7 +263,7 @@
 
     <div id="contact">
         <div id="contact-left">
-            <img src="./img/hcm1-zcbvsg9hor-1-1u1pj0zerd-nCorWQqba4.jpg" alt="">
+            <img src="includes/img/hcm1-zcbvsg9hor-1-1u1pj0zerd-nCorWQqba4.jpg" alt="">
         </div>
         <div id="contact-right">
             <h3 class="text-heading">chon tierra gần nhất</h3>
@@ -274,47 +288,49 @@
 
     <br>
     <hr style="margin-top: 1cm;">
-    <a id="back-to-homepage" href="" style="color: black;
+    <!-- <a id="back-to-homepage" href="" style="color: black;
         font-size: 26px;
-        text-decoration: none;"> Home page </a>
+        text-align: center;
+        text-decoration: none;"> Home page </a> -->
+        <button onclick="topFunction()" id="topBtn" title="Go to top">Home Page</button>
     <hr>
-    <div id="footer">
+    <!-- <div id="footer">
         <div id="footer-container">
 
             <div id="footer-row">
 
                 <div class="footer-col" style="width: 20%;">
-                    <img src="./img/logo_2.jpg" alt="logo">
+                    <img src="includes/img/logo_2.jpg" alt="logo">
                 </div>
 
                 <div class="footer-col">
                     <h5>About us</h5>
                     <a href="facebook.com/tudeptrai260504" target="_blank">
-                        <img src="./img/facebook-1.jpg" alt="facebook">
+                        <img src="includes/img/facebook-1.jpg" alt="facebook">
                     </a>
 
                     <a href="https://www.instagram.com/hoanganhtu26_/" target="_blank">
-                        <img src="./img/instagram-1.jpg" alt="instagram">
+                        <img src="includes/img/instagram-1.jpg" alt="instagram">
                     </a>
                 </div>
 
                 <div class="footer-col">
                     <h5 style="text-align: center;">Contact</h5>
                     <a href="facebook.com/tudeptrai260504" target="_blank">
-                        <img src="./img/facebook-1.jpg" alt="facebook">
+                        <img src="includes/img/facebook-1.jpg" alt="facebook">
                     </a>
 
                     <a href="https://www.instagram.com/hoanganhtu26_/" target="_blank">
-                        <img src="./img/instagram-1.jpg" alt="instagram">
+                        <img src="includes/img/instagram-1.jpg" alt="instagram">
                     </a>
                 </div>
 
                 <div class="footer-col">
                     <ul style="list-style-type: none;">
                         <!-- <li> -->
-                        <h5>Support</h5>
+                        <!-- <h5>Support</h5>
                         <!-- </li> -->
-                        <li>
+                        <!-- <li>
                             <span>Chính sách mua hàng</span>
                         </li>
                         <li>
@@ -326,12 +342,12 @@
                         <li>
                             <span>Giá vàng hôm nay</span>
                         </li>
-                    </ul>
-                </div>
+                    </ul> -->
+                <!-- </div>
             </div>
         </div>
-    </div>
-    <script src="./main.js"></script>
+    </div>  -->
+    <script src="includes/javascript/main.js"></script>
 </body>
-
+<?php  include("includes/footer.php");?>
 </html>
