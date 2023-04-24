@@ -44,12 +44,14 @@
 	      	</td>
 	      	<td  style="text-align: center;">
 	      		<a href="edit_sanpham.php?id=<?php echo $masp;?>">
-					<img src="../IMAGES/icon_edit.png" class="img_tb2">
+					<!-- <img src="../IMAGES/icon_edit.png" class="img_tb2"> -->
+					edit
 				</a>
 	      	</td>
 	      	<td style="text-align: center;">
 	      		<a onclick="messDelete(<?php echo $masp;?>);">
-	      			<img src="../IMAGES/icon_delete.png" class="img_tb2">
+	      			<!-- <img src="../IMAGES/icon_delete.png" class="img_tb2"> -->
+					delete
 	      		</a>
 	      	</td>
 	 	</tr>

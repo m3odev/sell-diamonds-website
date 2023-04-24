@@ -20,12 +20,12 @@
 				<div>
 					<div class="right">
 						<ul class="menu">
-							<li>
-								<a href="kiemtradonhang.php"><i class="fa fa-pencil-square-o"></i> Kiểm tra đơn hàng</a>
-							</li>
-							<li>
-								<a href="giohang.php"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a>
-							</li>
+							<!-- <li>
+								<a href="manage_order.php"><i class="fa fa-pencil-square-o"></i> Kiểm tra đơn hàng</a>
+							</li> -->
+							<!-- <li>
+								<a href="cart.php"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a>
+							</li> -->
 							<li>
 								<a href="login.php"><i class="fa fa-sign-in"></i>  Đăng nhập</a>
 							</li>

@@ -72,8 +72,8 @@
 						if(empty($errors))
 						{
 							$img=$_FILES['img']['name'];
-							$link_img='IMAGES/'.$img;
-							move_uploaded_file($_FILES['img']['tmp_name'],'../IMAGES/'.$img);
+							$link_img='./admin/img/'.$img;
+							move_uploaded_file($_FILES['img']['tmp_name'],'../admin/img/'.$img);
 							$query="INSERT INTO tintuc(tieude,noidung,thoigiandang,hinhanh,manv,tinhtrang)
 									VALUES(N'$title',N'$noidung','$thoigian',N'$link_img','$user',1)";
 							$results=mysqli_query($dbc,$query);

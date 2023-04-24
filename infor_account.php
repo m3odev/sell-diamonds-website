@@ -82,7 +82,7 @@
 				                <div class="col-sm-9">
 				                	<select name="gioitinh" id="gioitinh" class="form-control" style="margin-bottom: 15px;">
 				                		<?php
-				                			if($gioitinh=='nam'){
+				                			if($gioitinh == 'nam'){
 				                		?>
 				                				<option value="nam">Nam</option>
 				                				<option value="nu">Nữ</option>
@@ -123,6 +123,7 @@
 <script type="text/javascript">
 	function fromRegister()
 	{
+	
 		var hoten=document.getElementById('hoten');
 		var gioitinh=document.getElementById('gioitinh').value;
 		var ngaysinh=document.getElementById('ngaysinh').value;

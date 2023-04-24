@@ -34,7 +34,7 @@
 					$result_tt=mysqli_query($dbc,$query_tt);check_errors($result_sdh,$query_tt);
 					list($tt)=mysqli_fetch_array($result_tt,MYSQLI_NUM);
 
-					$query="SELECT count(makh) FROM khachhang";
+					$query="SELECT count(makh) FROM khachhang where vaitro = 0";
 					$result=mysqli_query($dbc,$query);check_errors($result_sdh,$query);
 					list($dhh)=mysqli_fetch_array($result,MYSQLI_NUM);
 				?>
@@ -51,7 +51,7 @@
 						</div>
 						<div>Số người đăng ký thành viên: <label><?php echo $dhh;?></label></div>
 						<div class="progress" style="height:30px;margin-top: 2%;">
-							<div class="progress-bar" style="width:80%;height:30px"></div>
+							<div class="progress-bar" style="width:10%;height:30px"></div>
 						</div>
 					</div>
 				</div>

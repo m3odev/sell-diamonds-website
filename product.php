@@ -70,7 +70,7 @@
 							function phantrang(page){
 								$.ajax({
 							        type:"POST",
-							        url:"includes/phan_trang.php",
+							        url:"includes/phantrang.php",
 							        data:"page="+page,
 							        cache:false,
 							        success:function(results){

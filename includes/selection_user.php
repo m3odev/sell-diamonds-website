@@ -10,7 +10,7 @@
 					    <ul class="leve10">
 					    	<li>
 
-								<a href="quanlydonhang.php">
+								<a href="manage_order.php">
 					    			<i class="glyphicon glyphicon-list-alt">
 					    			</i>
 					    			 Đơn hàng của tôi

@@ -32,12 +32,12 @@
 		<div class="col-md-3 col-sm-3 col-xs-12" style="padding: 0;">
 			<div class="product-item" style="position: relative;margin: 5px 3px 5px 0 ;">
 				<div class="prt_item_banner" style="min-height: 146px;">
-					<a href="chitietsanpham.php?san-pham=<?php echo $masp;?>" style="float: none;">
+					<a href="product_detail.php?san-pham=<?php echo $masp;?>" style="float: none;">
 						<img src=<?php echo $linkhinh;?>>
 					</a>
 				</div>
 				<div class="prt_item_title">
-					<a href="chitietsanpham.php?san-pham=<?php echo $masp;?>">
+					<a href="product_detail.php?san-pham=<?php echo $masp;?>">
 						<?php echo ucwords($tensp); ?>
 					</a>
 				</div>

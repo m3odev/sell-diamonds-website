@@ -179,7 +179,7 @@
         <div id="product-row">
             <div class="product-col">
                 <div class="product-img">
-                    <img src="includes/img/ring1.webp" alt="product 1">
+                    <img src="includes/img/ring1.jpg" alt="product 1">
                 </div>
 
                 <h3> Nhẫn cầu hôn kim cương Solitaire Pavé 6 chấu viền bi NCH1204 </h3>
@@ -188,7 +188,7 @@
 
             <div class="product-col">
                 <div class="product-img">
-                    <img src="includes/img/ring2.webp" alt="">
+                    <img src="includes/img/ring2.jpg" alt="">
                 </div>
 
                 <h3>Nhẫn cầu hôn kim cương Trellis 4 chấu xoắn NCH1402</h3>
@@ -197,7 +197,7 @@
 
             <div class="product-col">
                 <div class="product-img">
-                    <img src="includes/img/ring3.webp" alt="">
+                    <img src="includes/img/ring3.jpg" alt="">
                 </div>
 
                 <h3>Nhẫn cầu hôn kim cương Twist 1 đai tấm NCH1701</h3>
@@ -206,7 +206,7 @@
 
             <div class="product-col">
                 <div class="product-img">
-                    <img src="includes/img/ring4.webp" alt="">
+                    <img src="includes/img/ring4.jpg" alt="">
                 </div>
 
                 <h3>Nhẫn cầu hôn kim cương Fivestone dạng trellis NCH3302</h3>

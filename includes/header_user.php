@@ -21,10 +21,10 @@
 					<div class="right">
 						<ul class="menu">
 							<li>
-								<a href="quanlydonhang.php"><i class="fa fa-pencil-square-o"></i> Đơn hàng của tôi</a>
+								<a href="manage_order.php"><i class="fa fa-pencil-square-o"></i> Đơn hàng của tôi</a>
 							</li>
 							<li>
-								<a href="giohang.php"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a>
+								<a href="cart.php"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a>
 							</li>
 							<li>
 								<a href="infor_account.php"><i class="fa fa-sign-in"></i>  <?php echo $_SESSION['user']['hoten'];?></a>
@@ -74,7 +74,7 @@
 					</li>
 					<li class="s">/</li>
 					<li>
-						<a href="tintuc.php" title="TIN TỨC">TIN TỨC</a>
+						<a href="news.php" title="TIN TỨC">TIN TỨC</a>
 					</li>
 					<li class="s">/</li>
 					<li>
