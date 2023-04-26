@@ -1,10 +1,10 @@
-<div class="ctn_product">
+					<div class="ctn_product">
 						<div class="ctn_product_ttl">
 						    <span>
 							  TÀI KHOẢN
 						    </span>
 						    <span style="float: right;margin-right: 5%;" >
-						    	<img src="includes/img/icon_vmega.png">
+						    	<img src="./includes/img/icon_vmega.png">
 						    </span>
 					    </div>
 					    <ul class="leve10">

@@ -1,6 +1,6 @@
 <div id="footer">
 		<div class="ftr_img">
-				<img src="includes/img/logo_2.jpg">
+				<img src="./includes/img/logo_2.jpg">
 		</div>
 		<div class="ftr_container">
 			<div class="ftr_container_ptr_1 ftr_ctn_flt">
@@ -51,7 +51,7 @@
 			<div class="ftr_container_ptr_3 ftr_ctn_flt">
 				<div class="ttl">
 					<h4>
-						Contact
+						FACEBOOK
 					</h4>
 					<div class="icn">
 						<ul>
@@ -60,21 +60,17 @@
 								</i>
 							</li>
 							<li>
-							<a href="https://www.facebook.com/tudeptrai2654"
-							target="_blank">
 								<i class="fa fa-facebook">
-									
 								</i>
-								</a>
 							</li>
-							<!-- <li>
+							<li>
 								<i class="fa fa-youtube">
 								</i>
 							</li>
 							<li>
 								<i class="fa fa-twitter ">
 								</i>
-							</li> -->
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -82,7 +78,7 @@
 		</div>
 		<div style="clear: both;"></div>
 		<div class="ftr_bnr">
-			© 2023, Diamond Store
+			© 2023, Tierra
 		</div>
 	</div>
 </body>

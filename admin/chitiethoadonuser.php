@@ -66,7 +66,7 @@
 										      		<?php echo $masp;?>
 										      	</td>
 										      	<td>
-										      		<img src=<?php echo $linkhinh;?> class="img_table">
+												  <img src='../<?php echo $linkhinh;?>' class="img_table">
 										      	</td>
 										      	<td>
 													<?php echo $tensp;?>

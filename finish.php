@@ -19,14 +19,20 @@
 		</div>
 		<div class="pmnt_order_scc">
 			<?php
-				$query_tk="SELECT thoigiandathang,hinhthucthanhtoan,tongtien FROM donhang WHERE madh=".$_SESSION['user']['madh'];
-				$result_tk=mysqli_query($dbc,$query_tk);check_errors($result_tk,$query_tk);
-				list($time,$pay,$total_price)=mysqli_fetch_array($result_tk,MYSQLI_NUM);
+				$query_tk="SELECT tenkh,thoigiandathang,hinhthucthanhtoan,tongtien FROM donhang WHERE madh=".$_SESSION['user']['madh'];
+
+			
+				$result_tk = mysqli_query($dbc,$query_tk);
+				check_errors($result_tk,$query_tk);
+				list($name,$time,$pay,$total_price) = mysqli_fetch_array($result_tk,MYSQLI_NUM);
 			?>
 			<div class="order_scc">
 				<h3>Mã đơn hàng của bạn:<span style="color: red;"> #<?php echo $_SESSION['user']['madh'];?></span></h3>
 				<p>
 				    <b>Ngày đặt:</b><span> <?php echo $time;?></span>
+				</p>
+				<p>
+					<b>Name</b><span> <?php echo $name;?></span>
 				</p>
 				<p>
 					<b>Phương thức thanh toán:</b><span> <?php echo $pay;?></span>
@@ -39,6 +45,7 @@
 				      <tr>
 				        <th style="width: 10%;">STT</th>
 				        <th style="width: 22%;">Tên sản phẩm</th>
+						<th>Hinh Ảnh</th>
 				        <th>Giá</th>
 				        <th>Số lượng</th>
 				        <th>Thành tiền</th>
@@ -56,6 +63,9 @@
 							      	</td>
 							      	<td>
 							      		<span><?php echo ucwords($tensp);?><span>
+							      	</td>
+									  <td>
+							      		<img style="width:60%;" src=<?php echo $linkhinh;?>>
 							      	</td>
 							      	<td class="price" style="color: black;"><?php echo number_format($gia,0,',','.');?> đ</td>
 							      	<td>

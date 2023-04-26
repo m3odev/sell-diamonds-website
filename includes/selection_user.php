@@ -4,7 +4,7 @@
 							  Quản lý cá nhân
 						    </span>
 						    <span style="float: right;margin-right: 5%;" >
-						    	<img src="includes/img/icon_vmega.png">
+						    	<img src="./includes/img/icon_vmega.png">
 						    </span>
 					    </div>
 					    <ul class="leve10">
@@ -38,4 +38,4 @@
 					    		</a>
 					    	</li>
 					    </ul>
-					</div>  
+					</div>

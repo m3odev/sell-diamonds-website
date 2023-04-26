@@ -13,9 +13,9 @@
 	$result_pg=mysqli_query($dbc,$query_pg);
 	check_errors($result_pg,$query_pg);
 	list($record)=mysqli_fetch_array($result_pg,MYSQLI_NUM);
-	if($record > $limit)
+	if($record>$limit)
 	{
-		$per_page = ceil($record/$limit);
+		$per_page=ceil($record/$limit);
 	}else{
 		$per_page=1;
 	}
@@ -23,10 +23,11 @@
 	$now=date('Y-m-d H:i:s');
 	$query_tk="SELECT masp,tensp,gia,motasp,chitietsp,loaisp,linkhinh FROM sanpham ORDER BY masp DESC LIMIT {$start},{$limit}";
 	$result_tk=mysqli_query($dbc,$query_tk);check_errors($result_tk,$query_tk);
-	while(list($masp,$tensp,$gia,$motasp,$chitietsp,$loaisp,$linkhinh)=mysqli_fetch_array($result_tk,MYSQLI_NUM))
+	while(list($masp,$tensp,$gia,$motasp,$chitietsp,$loaisp,$linkhinh) = mysqli_fetch_array($result_tk,MYSQLI_NUM))
     {
-		$query_tk1="SELECT sum(khuyenmai.giatrikhuyenmai) FROM khuyenmai, sanphamkhuyenmai WHERE '{$now}'<=thoigianketthuc and '{$now}'>=thoigianbatdau and khuyenmai.makm=sanphamkhuyenmai.makm and sanphamkhuyenmai.masp={$masp} and khuyenmai.tinhtrang=1";
-		$result_tk1=mysqli_query($dbc,$query_tk1);check_errors($result_tk1,$query_tk1);
+		$query_tk1="SELECT sum(khuyenmai.giatrikhuyenmai) FROM khuyenmai, sanphamkhuyenmai WHERE '{$now}' <= thoigianketthuc and '{$now}'>=thoigianbatdau and khuyenmai.makm=sanphamkhuyenmai.makm and sanphamkhuyenmai.masp={$masp} and khuyenmai.tinhtrang=1";
+		$result_tk1=mysqli_query($dbc,$query_tk1);
+		check_errors($result_tk1,$query_tk1);
 		list($km)=mysqli_fetch_array($result_tk1,MYSQLI_NUM);
     	?>
 		<div class="col-md-3 col-sm-3 col-xs-12" style="padding: 0;">
@@ -60,10 +61,10 @@
 					}
 				?>
 				<div class="prt_item_buy" onclick="addCart(<?php echo $masp;?>);" style="cursor: pointer;">
-					<a>
-						MUA HÀNG
+					<a style="margin-left:0.4cm;">
+						buy item
 					</a>
-					<img src="./includes/img/addcart2.png">
+					<img src="includes/img/addcart2.png">
 				</div>
 			</div>
 		</div>
@@ -71,7 +72,7 @@
 	<div style="width: 100%;text-align: center;clear: both;">
 		<?php
 			echo "<ul class='pagination click_page'>";
-			if($per_page>1)
+			if($per_page > 1)
 			{
 				if($current_page!=1)
 				{

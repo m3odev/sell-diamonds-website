@@ -53,11 +53,11 @@
 						$query = "SELECT masp,tensp,gia,motasp,chitietsp,loaisp,linkhinh FROM sanpham WHERE masp in ($str)";
 						$results = mysqli_query($dbc,$query);
 						check_errors($results,$query);
-						while(list($masp,$tensp,$gia,$motasp,$chitietsp,$loaisp,$linkhinh)=mysqli_fetch_array($results,MYSQLI_NUM))
+						while(list($masp,$tensp,$gia,$motasp,$chitietsp,$loaisp,$linkhinh) = mysqli_fetch_array($results,MYSQLI_NUM))
 					    {
-					    	$query_tk1="SELECT sum(khuyenmai.giatrikhuyenmai) FROM khuyenmai, sanphamkhuyenmai WHERE '{$now}'<=thoigianketthuc and '{$now}'>=thoigianbatdau and khuyenmai.makm=sanphamkhuyenmai.makm and sanphamkhuyenmai.masp={$masp} and khuyenmai.tinhtrang=1";
-							$result_tk1=mysqli_query($dbc,$query_tk1);check_errors($result_tk1,$query_tk1);
-							list($km)=mysqli_fetch_array($result_tk1,MYSQLI_NUM);
+					    	$query_tk1 = "SELECT sum(khuyenmai.giatrikhuyenmai) FROM khuyenmai, sanphamkhuyenmai WHERE '{$now}'<=thoigianketthuc and '{$now}'>=thoigianbatdau and khuyenmai.makm=sanphamkhuyenmai.makm and sanphamkhuyenmai.masp={$masp} and khuyenmai.tinhtrang=1";
+							$result_tk1 = mysqli_query($dbc,$query_tk1);check_errors($result_tk1,$query_tk1);
+							list($km) = mysqli_fetch_array($result_tk1,MYSQLI_NUM);
 					    	?>
 							<tr id="#<?php echo $masp;?>">
 						      	<td>

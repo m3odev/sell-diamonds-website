@@ -39,6 +39,7 @@
 		        $_SESSION['user']['diachi']=$diachi1;
 		        $_SESSION['user']['hoten']=$hoten1;
 		        $_SESSION['user']['dienthoai']=$dienthoai1;
+				
 	            header('Location:index.php');
 	        }
 	        else
