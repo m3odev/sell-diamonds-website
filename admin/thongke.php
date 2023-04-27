@@ -46,12 +46,13 @@
 					check_errors($result_sdh,$query);
 					list($banking) = mysqli_fetch_array($result,MYSQLI_NUM);
 				?>
+
 	        <div class="col-sm-10 contain_right">
 	            <div style="background-color:white;margin-right: -29px;margin-left: -15px;color: black;padding: 40px;">
 	                <h3>Thống kê</h3>
 
-	                <select name="date" id="date" onchange="">
-	                    <option value="">Select type</option>
+	                <select name="date" id="date" onchange="searchByDate()">
+	                    <option value="">Select date</option>
 	                    <?php
 									$query = "SELECT DISTINCT date(thoigiandathang) FROM donhang"; //load các loai sản phẩm 
 									$result = mysqli_query($dbc,$query);
@@ -61,9 +62,13 @@
 	                    <option value="<?php echo $date; ?>">
 	                        <?php echo $date; ?>
 	                    </option>
+
 	                    <?php }
 								?>
 	                </select>
+
+
+
 
 	                <div>Số đơn hàng được đặt: <label><?php echo $sodh;?></label></div>
 	                <div class="progress" style="height:30px;margin-top: 2%;">
@@ -88,27 +93,30 @@
 	                </div>
 
 	                <script type="text/javascript">
-						function searchName(page)
-							{
-								// var name = document.getElementById('tensp').value;
-								 var date = document.getElementById('date').value;
-								// var price = document.getElementById('gia').value;
-								if(name != "" || item != "" || price != "")
-								{
-									$.ajax({
-								        type:"POST",
-								        url:"admin/includes/xulythongke.php",
-								        data:{date:date},
-								        cache:false,
-								        success:function(results){
-								        	$('.product-wrapper').html(results);
-								        }
-								    });
-								}
-								// else{
-								// 	phantrang(1);
-								// }
-							}
+	                function searchByDate() {
+	                    // var name = document.getElementById('tensp').value;
+	                    var date = document.getElementById('date').value;
+	                    // var price = document.getElementById('gia').value;
+	                    if (date != "") {
+	                        $.ajax({
+	                            type: "POST",
+	                            url: "includes/xulythongke.php",
+	                            data: {
+	                                date: date
+	                            },
+	                            cache: false,
+	                            success: function(results) {
+	                                // alert(date)
+									
+	                                $('.product-wrapper').html(results);
+	                                // window.location="includes/xulythongke.php";
+	                            }
+	                        });
+	                    }
+	                    // else{
+	                    // 	phantrang(1);
+	                    // }
+	                }
 	                </script>
 
 

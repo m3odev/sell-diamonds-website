@@ -16,7 +16,7 @@
 	list($record)=mysqli_fetch_array($result_pg,MYSQLI_NUM);
 	if($record>$limit)
 	{
-		$per_page=ceil($record/$limit);
+		$per_page = ceil($record/$limit);
 	}else{
 		$per_page=1;
 	}

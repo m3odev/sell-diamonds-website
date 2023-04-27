@@ -58,8 +58,9 @@
 						    <tbody>
 						    	<?PHP
 							    		$query="SELECT masp,tensp,gia,soluong,tongtien,linkhinh FROM sanphamtrongdonhang WHERE madh=".$_GET['ma-donhang'];
-										$result=mysqli_query($dbc,$query);check_errors($result,$query);$i=1;
-										while(list($masp,$tensp,$gia,$soluong,$tongtien,$linkhinh)=mysqli_fetch_array($result,MYSQLI_NUM))
+										$result=mysqli_query($dbc,$query);check_errors($result,$query);
+										$i = 1;
+										while(list($masp,$tensp,$gia,$soluong,$tongtien,$linkhinh) = mysqli_fetch_array($result,MYSQLI_NUM))
 									    {?>
 											<tr>
 										      	<td>
