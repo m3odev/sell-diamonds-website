@@ -77,11 +77,11 @@
 					</li>
 					<li class="s">/</li>
 					<li>
-						<a href="gioithieu.php" title="GIỚI THIỆU">GIỚI THIỆU</a>
+						<a href="introduce.php" title="GIỚI THIỆU">GIỚI THIỆU</a>
 					</li>
 					<li class="s">/</li>
 					<li>
-						<a href="lienhe.php" title="LIÊN HỆ">LIÊN HỆ</a>
+						<a href="contact.php" title="LIÊN HỆ">LIÊN HỆ</a>
 					</li>
 					<li class="s">/</li>
 				</ul>

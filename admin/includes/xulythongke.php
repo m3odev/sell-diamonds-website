@@ -36,32 +36,24 @@
 					$result = mysqli_query($dbc,$query);
 					check_errors($result_sdh,$query);
 					list($tvdk) = mysqli_fetch_array($result,MYSQLI_NUM);
+                    var_dump($tvdk);
+
 
 					$query = "SELECT sum(tongtien) FROM donhang where hinhthucthanhtoan = N'Ngân hàng' and date(thoigiandathang) = '$date'";
 					$result = mysqli_query($dbc,$query);
 					check_errors($result_sdh,$query);
 					list($banking) = mysqli_fetch_array($result,MYSQLI_NUM);
+
+                    if($banking == NULL) {
+                        $banking = 0;
+                    }
+                    var_dump($banking);
 				?>
         <div class="col-sm-10 contain_right">
             <div style="background-color:white;margin-right: -29px;margin-left: -15px;color: black;padding: 40px;">
-                <!-- <h3>Thống kê</h3> -->
+         
 
-                <select name="date" id="date" onchange="searchByDate()">
-                    <option value="">Select type</option>
-                    <?php
-									$query = "SELECT DISTINCT date(thoigiandathang) FROM donhang"; //load các loai sản phẩm 
-									$result = mysqli_query($dbc,$query);
-                                    check_errors($result,$query);
-									while(list($date) = mysqli_fetch_array($result,MYSQLI_NUM))
-								    {?>
-                    <option value="<?php echo $date; ?>">
-                        <?php echo $date; ?>
-                    </option>
-                    <?php }
-								?>
-                </select>
-
-                <div>Số đơn hàng được đặt: <label><?php echo $sodh; var_dump($sodh)?></label></div>
+                <div>Số đơn hàng được đặt: <label><?php echo $sodh; echo "so don hang "; var_dump($sodh)?></label></div>
                 <div class="progress" style="height:30px;margin-top: 2%;">
                     <div class="progress-bar" style="width: <?php echo ((int)$sodh / 10);?>0%;height:30px"></div>
                 </div>
